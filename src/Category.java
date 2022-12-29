@@ -34,10 +34,10 @@ public class Category implements Serializable{
 
     @Override
     public String toString() {
-        return "ca{" +
+        return
                 "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+                ", name='" + name + '\'';
+
     }
 
 }

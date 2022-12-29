@@ -1,18 +1,21 @@
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
+    private static final long serialVersionUID = 1L;
     private int id;
     private String name;
     private double price;
-    private String quanlity;
+    private int quatity;
     private Category category;
 
     public Product() {
     }
 
-    public Product(int id, String name, double price, String quanlity, Category category) {
+    public Product(int id, String name, double price, int quatity, Category category) {
         this.id = id;
         this.name = name;
         this.price = price;
-        this.quanlity = quanlity;
+        this.quatity = quatity;
         this.category = category;
     }
 
@@ -40,12 +43,12 @@ public class Product {
         this.price = price;
     }
 
-    public String getQuanlity() {
-        return quanlity;
+    public int getQuatity() {
+        return quatity;
     }
 
-    public void setQuanlity(String quanlity) {
-        this.quanlity = quanlity;
+    public void setQuatity(int quatity) {
+        this.quatity = quatity;
     }
 
     public Category getCategory() {
@@ -58,12 +61,12 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "Product = " +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +
-                ", quanlity='" + quanlity + '\'' +
-                ", category=" + category +
-                '}';
+                ", quanlity='" + quatity + '\'' +
+                ", category=" + category;
+
     }
 }
